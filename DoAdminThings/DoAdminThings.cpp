@@ -3,6 +3,7 @@
 #include <shlobj.h>
 #include "sal.h"
 #include "stdio.h"
+#include "conio.h"
 
 #pragma comment(lib, "advapi32.lib")
 #pragma comment(lib, "crypt32.lib")
@@ -155,5 +156,7 @@ int main()
 	
     printf("Writing to HKCU");
     WriteToRegistry(HKEY_CURRENT_USER);
+
+    (void)_getch();
 }
 
