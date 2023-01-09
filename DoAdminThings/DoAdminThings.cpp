@@ -131,30 +131,30 @@ int main()
 {
 	/////////////////////////////////////////////////////////////////////////
 	// These are all admin things
-    printf("Writing to the Windows Folder");
+    printf("Writing to the Windows Folder\n");
     WriteToFile("c:\\windows\\system32\\test.txt");
 	
-	printf("Writing to the Program Files Folder");
+	printf("Writing to the Program Files Folder\n");
     WriteToFile("c:\\program files\\test.txt");
 
-    printf("Reading from System My certstore");
+    printf("Reading from System My cert store\n");
     ReadCertFromStore(CERT_SYSTEM_STORE_LOCAL_MACHINE, L"My");
 
-    printf("Writing to HKLM");
+    printf("Writing to HKLM\n");
     WriteToRegistry(HKEY_LOCAL_MACHINE);
 
-    printf("Asserting DEBUG priv");
+    printf("Asserting DEBUG priv\n");
     AssertAPrivilege(SE_DEBUG_NAME);
 
     /////////////////////////////////////////////////////////////////////////
     // These are non-admin things
-    printf("Writing to profile folder");
+    printf("Writing to profile folder\n");
     WriteToProfileFolder();
 
-    printf("Reading from User's My certstore");
+    printf("Reading from User's My cert store\n");
     ReadCertFromStore(CERT_SYSTEM_STORE_CURRENT_USER, L"My");
 	
-    printf("Writing to HKCU");
+    printf("Writing to HKCU\n");
     WriteToRegistry(HKEY_CURRENT_USER);
 
     (void)_getch();
